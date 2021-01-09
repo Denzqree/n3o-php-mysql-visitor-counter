@@ -15,3 +15,5 @@ Notes :
 
 This is how you should create the table in your database :
 CREATE TABLE visitors( ip INT(10) UNSIGNED PRIMARY KEY, visit INT(15) DEFAULT 0 , timestamp TIME);
+
+Current version supports only IPv4.

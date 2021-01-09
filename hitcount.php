@@ -60,9 +60,9 @@
     if($result){
 
         $timestampResult = $result->fetch_row();
-        $timestampResultRow = $timestampResult[0];
-        $timestampResultExplode = explode(':',$timestampResultRow);
-        $timeDifference = $timeStampResultExplode[0]-date("H");
+        $timestampResultValue = $timestampResult[0];
+        $timestampResultExplode = explode(':',$timestampResultValue);
+        $timeDifference = $timestampResultExplode[0]-date("H");
 
         if($timeDifference > -12 && $timeDifference < 12){     
 
