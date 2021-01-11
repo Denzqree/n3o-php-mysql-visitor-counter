@@ -52,7 +52,7 @@
 
 
     // Here stands the whole logic for the 12-hour visit counting limit.
-    // This means that your visit will be persisted for 12 hours.
+    // This means that your visit will count for 12 hours.
     //-------------------------------------------------------------------------------------
     $sql = "SELECT timestamp FROM visitors_count WHERE ip = ".$ip_calculation;
     $result = $conn->query($sql);
