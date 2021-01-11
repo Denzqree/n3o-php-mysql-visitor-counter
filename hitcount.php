@@ -62,10 +62,10 @@
         $timestampResult = $result->fetch_row();
         $timestampResultValue = $timestampResult[0];
         $timestampResultExplode = explode(':',$timestampResultValue);
-        $timeDifference = $timestampResultExplode[0]-date("H");
+        $timeDifference = date("H") - $timestampResultExplode[0];
 
-        if($timeDifference > -12 && $timeDifference < 12){     
-
+        if (($timeDifference >= -12 && $timeDifference <= 0) || ($timeDifference >= 12 && $timeDifference  <= 24)) {
+    
             $sql = "UPDATE visitors_count SET visit = visit+1, timestamp = CURRENT_TIME() WHERE ip = ".$ip_calculation;
             $conn->query($sql);
         }
